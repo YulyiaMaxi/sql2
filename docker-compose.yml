@@ -7,7 +7,7 @@ services:
       - '3306:3306'
 
     volumes:
-      - ./schema:/docker-entrypoint-initdb.d //entrypoint нужен для того, чтобы пр запуске докера загрузить сразу и скрипты
+      - ./schema:/docker-entrypoint-initdb.d 
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=app
