@@ -1,5 +1,5 @@
 INSERT INTO users (id, login, password)
-VALUES (1, "vasya", "password");
+VALUES (1, "vasya",
 
 INSERT INTO users (id, login, password)
 VALUES (2, "petya", "password");
