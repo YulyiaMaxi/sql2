@@ -26,4 +26,18 @@ public class test {
         verificationPage.verifyVerificationPageVisibility();// проверяем, что появилась страница верификации
         verificationPage.validVerify(DataHelper.code);//вставка валидного кода - 12345
     }
+
+    @Test
+    public void shouldGetErrorNotification {
+    var loginPage = open("http://localhost:9999", LoginPage.class);
+    var auth_info = DataHelper.getAuthInfoValid();
+    var VerificationPage = loginPage.validLogin(authInfo);
+    verificationPage.verifyVerificationPageVisibility();
+    var verificationCode = DataHelper.generateRandomVerificationCode();
+    verificationPage.verify(veridicationCode.getCode());
+    verificationPage.verifyErrorNotificationVisibiliy();
+
+    }
+
+    
 }
